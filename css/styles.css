@@ -5,9 +5,10 @@
   --btn-text-color: #ffffff;
 
   --hero-bg: rgba(47, 48, 58, 0.8);
-  /* --feature-item-bg: #f5f4fa; */
+  --feature-item-bg: #f5f4fa;
   --caption-bg: rgba(47, 48, 58, 0.8);
   --our-team-bg: #f5f4fa;
+  --border-logo-color: #afb1b8;
 
   --footer-bg: #2f303a;
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
@@ -20,6 +21,18 @@
   --font-logo: 'Raleway', sans-serif;
   --font-main: -apple-system, BlinkMacSystemFont, avenir next, avenir,
     helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -37,12 +50,49 @@ address {
 }
 
 /* ANCHOR Шапка сайта */
+.page-header {
+  margin-bottom: 0px;
+}
+
+.page-header .container {
+  width: 1200px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+}
+
+.link {
+  display: block;
+
+  text-decoration: none;
+}
+
+/* Лого styles */
 .logo {
+  display: inline-block;
+  margin-right: 85px;
+
   font-family: var(--font-logo);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  text-decoration: none;
 }
 
 .logo .begin {
@@ -54,6 +104,39 @@ address {
 
 .logo .end-light {
   color: #ffffff;
+}
+
+.site .link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.site .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address-icon {
+  vertical-align: middle;
+}
+
+.address-item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.address-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.link.contacts {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .link,
@@ -79,9 +162,21 @@ address {
 }
 
 /* ANCHOR Герой */
-.hero-title {
-  color: #ffffff;
+.hero {
+  height: 600px;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   background-color: var(--hero-bg);
+}
+
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #ffffff;
 
   font-weight: 900;
   font-size: 44px;
@@ -92,22 +187,68 @@ address {
 }
 
 .btn {
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 200px;
+
   color: var(--btn-text-color);
   background-color: var(--accent-color);
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-
-  /* FIXME */
-  /* display: flex; */
-  /* align-items: center;
-  text-align: center; */
+  text-align: center;
   letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.btn-order {
+  display: flex;
+  justify-content: center;
 }
 
 /* ANCHOR Особенности */
+/* padding for sections */
+.feature,
+.what-we-do,
+.our-team,
+.customers {
+  padding: 94px 0px;
+}
+
+.feature,
+.what-we-do .list,
+.our-team .list,
+.customers .list {
+  display: flex;
+  justify-content: center;
+}
+
+.feature .item {
+  width: 270px;
+  height: 251px;
+
+  background-color: white;
+}
+
+/* margin-right for 4 sections items */
+.feature .item:not(:last-child),
+.what-we-do .item:not(:last-child),
+.our-team .list .item-member:not(:last-child),
+.customers .logo-icon:not(:last-child) {
+  margin-right: 30px;
+}
+
+.feature .container-icon {
+  margin-bottom: 30px;
+  padding: 25px 100px;
+
+  background-color: var(--feature-item-bg);
+}
+
 .feature .title {
+  margin-bottom: 10px;
+
   color: var(--primary-text-color);
 
   font-weight: 700;
@@ -121,19 +262,33 @@ address {
   color: var(--contacts-color);
 
   font-size: 14px;
-  line-height: 1.71x;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
 /* ANCHOR Чем мы занимаемся */
+.what-we-do .title {
+  margin-bottom: 50px;
+}
+
+.what-we-do .caption {
+  padding: 27px;
+}
+/* FIXME */
+/* img {
+  display: block;
+} */
+
 .what-we-do .caption {
   color: #ffffff;
   background-color: var(--caption-bg);
 }
 
 .what-we-do > .title,
-.our-team > .title,
+.our-team .title,
 .customers > .title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -151,6 +306,36 @@ address {
 }
 
 /* ANCHOR Наша команда */ /* и часть Портфолио Все */
+.our-team .item-member {
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.item-member > .photo {
+  margin-bottom: 30px;
+}
+
+.item-member > .name {
+  margin-bottom: 10px;
+}
+
+.item-member > .occupation {
+  margin-bottom: 16px;
+}
+
+.item-member > .networks {
+  margin-bottom: 24px;
+}
+
+.networks > .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.network-icon {
+  padding: 12px 12px;
+}
+
 .our-team {
   background-color: var(--our-team-bg);
 }
@@ -196,8 +381,87 @@ address {
   background-color: var(--accent-color);
 }
 
+/* ANCHOR Постоянные клиенты */
+.customers .logo-icon {
+  width: 170px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--border-logo-color);
+  border-radius: 4px;
+}
+
 /* ANCHOR Футер */
-footer {
+.page-footer .container {
+  width: 1200px;
+  height: 252px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 15px;
+
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.page-footer .address-container {
+  margin-right: 69px;
+}
+
+.page-footer .connect-container {
+  /* margin-top: 72px; */
+  margin-right: 94px;
+}
+
+.page-footer .describe-container {
+  flex-grow: 1;
+}
+
+.page-footer .logo {
+  margin-bottom: 20px;
+}
+
+.page-footer .address,
+.page-footer .e-mail {
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
+.page-footer .connect,
+.page-footer .describe {
+  margin-bottom: 20px;
+}
+
+.page-footer .btn {
+  padding-left: 28px;
+  padding-right: 28px;
+  border-radius: 4px;
+  border-color: transparent;
+
+  display: flex;
+  align-content: center;
+}
+
+.page-footer .form {
+  display: flex;
+}
+
+.email {
+  padding-left: 16px;
+  display: inline-block;
+  flex-grow: 1;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.form .email {
+  margin-right: 12px;
+}
+
+.page-footer {
   background-color: var(--footer-bg);
 }
 
@@ -218,6 +482,7 @@ footer .phone {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  text-decoration: none;
 }
 
 .connect,
@@ -227,6 +492,10 @@ footer .phone {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+.email {
+  background-color: var(--footer-bg);
 }
 
 /* ANCHOR Portfolio page */
@@ -244,9 +513,4 @@ footer .phone {
 .list-all .desc {
   color: var(--btn-text-color);
   background-color: var(--item-desc-bg);
-}
-
-/* FIXME */
-a {
-  text-decoration: none;
 }

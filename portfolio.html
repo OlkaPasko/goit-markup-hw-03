@@ -8,41 +8,61 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
+    />
+    <!-- <link rel="stylesheet" href="./css/normalize.css" /> -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body>
     <!-- ANCHOR Шапка сайта -->
-    <header>
-      <nav class="nav">
-        <a class="logo" href="./index.html" lang="en"
-          ><span class="begin">Web</span><span class="end"> Studio</span></a
-        >
-        <ul class="site list">
-          <li><a class="link" href="./index.html">Студия</a></li>
-          <li><a class="link current" href="./portfolio.html">Портфолио</a></li>
-          <li><a class="link" href="#">Контакты</a></li>
-        </ul>
-      </nav>
-      <ul class="list">
-        <li>
-          <address>
-            <a class="contacts" href="mailto:info@devstudio.com">
-              <img src="./images/nav/envelope.svg" alt="Почта" />
-              info@devstudio.com
-            </a>
-          </address>
-        </li>
-        <li>
-          <address>
-            <a class="contacts" href="tel:+380961111111">
-              <img src="./images/nav/smartphone.svg" alt="Телефон" />
-              +38 096 111 11 11
-            </a>
-          </address>
-        </li>
-      </ul>
+    <header class="page-header">
+      <div class="container">
+        <nav class="nav">
+          <a class="logo" href="./index.html" lang="en"
+            ><span class="begin">Web</span><span class="end"> Studio</span></a
+          >
+          <ul class="site list">
+            <li class="item">
+              <a class="link current" href="./index.html">Студия</a>
+            </li>
+            <li class="item">
+              <a class="link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="item"><a class="link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="contacts-list">
+          <ul class="list">
+            <li class="address-item">
+              <address>
+                <a class="link contacts" href="mailto:info@devstudio.com">
+                  <img
+                    class="address-icon"
+                    src="./images/nav/envelope.svg"
+                    alt="Почта"
+                  />
+                  info@devstudio.com
+                </a>
+              </address>
+            </li>
+            <li class="address-item">
+              <address>
+                <a class="link contacts" href="tel:+380961111111">
+                  <img
+                    class="address-icon"
+                    src="./images/nav/smartphone.svg"
+                    alt="Телефон"
+                  />
+                  +38 096 111 11 11
+                </a>
+              </address>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -197,82 +217,92 @@
     </main>
 
     <!-- ANCHOR Футер -->
-    <footer>
-      <div>
-        <a class="logo" href="./index.html" lang="en"
-          ><span class="begin">Web</span
-          ><span class="end-light"> Studio</span></a
-        >
-        <address>
-          <p>
-            <a
-              class="address"
-              href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
-            >
-              г. Киев, пр-т Леси Украинки, 26 </a
-            ><br />
-            <a class="e-mail" href="mailto:info@devstudio.com"
-              >info@example.com </a
-            ><br />
-            <a class="phone" href="tel:+380961111111">+38 099 111 11 11</a>
-          </p>
-        </address>
-      </div>
-      <div>
-        <p class="connect">присоединяйтесь</p>
-        <ul class="list">
-          <li>
-            <a href="#">
-              <img
-                class="network-icon"
-                src="./images/temp-icons/instagram.svg"
-                alt="Иконка инстаграм"
+    <footer class="page-footer">
+      <div class="container">
+        <div class="address-container">
+          <a class="logo" href="./index.html" lang="en">
+            <span class="begin">Web</span>
+            <span class="end-light"> Studio</span>
+          </a>
+          <address>
+            <p>
+              <a
+                class="address"
+                href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
+              >
+                г. Киев, пр-т Леси Украинки, 26 </a
+              ><br />
+              <a class="e-mail" href="mailto:info@devstudio.com"
+                >info@example.com </a
+              ><br />
+              <a class="phone" href="tel:+380961111111">+38 099 111 11 11</a>
+            </p>
+          </address>
+        </div>
+        <div class="connect-container">
+          <p class="connect">присоединяйтесь</p>
+          <ul class="networks list">
+            <li class="item">
+              <a href="#">
+                <img
+                  class="network-icon"
+                  src="./images/temp-icons/instagram.svg"
+                  alt="Иконка инстаграм"
+                />
+              </a>
+            </li>
+            <li class="item">
+              <a href="#">
+                <img
+                  class="network-icon"
+                  src="./images/temp-icons/twitter.svg"
+                  alt="Иконка твиттер"
+                />
+              </a>
+            </li>
+            <li class="item">
+              <a href="#">
+                <img
+                  class="network-icon"
+                  src="./images/temp-icons/facebook.svg"
+                  alt="Иконка фейсбук"
+                />
+              </a>
+            </li>
+            <li class="item">
+              <a href="#">
+                <img
+                  class="network-icon"
+                  src="./images/temp-icons/linkedin.svg"
+                  alt="Иконка линкедин"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="describe-container">
+          <p class="describe">Подпишитесь на рассылку</p>
+          <div class="form-container">
+            <form class="form" action="#">
+              <input
+                class="email"
+                type="email"
+                name="email"
+                placeholder="E-mail"
               />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                class="network-icon"
-                src="./images/temp-icons/twitter.svg"
-                alt="Иконка твиттер"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                class="network-icon"
-                src="./images/temp-icons/facebook.svg"
-                alt="Иконка фейсбук"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                class="network-icon"
-                src="./images/temp-icons/linkedin.svg"
-                alt="Иконка линкедин"
-              />
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <p class="describe">Подпишитесь на рассылку</p>
-        <form action="#">
-          <input type="email" name="email" placeholder="E-mail" />
-          <button class="btn">
-            Подписаться
-            <img
-              src="./images/buttons/icon-send.png"
-              alt=""
-              width="24"
-              height="24"
-            />
-          </button>
-        </form>
+              <button class="btn">
+                Подписаться
+                <img
+                  class="send-icon"
+                  src="./images/buttons/icon-send.png"
+                  alt=""
+                  width="24"
+                  height="24"
+                />
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
