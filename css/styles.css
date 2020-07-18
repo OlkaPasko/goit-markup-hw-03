@@ -16,11 +16,13 @@
   /* Portfolio page*/
   --btn-bg: #f5f4fa;
   --item-desc-bg: rgba(33, 150, 243, 0.9);
+  --border-container: #eeeeee;
 
   /* fonts */
   --font-logo: 'Raleway', sans-serif;
-  --font-main: -apple-system, BlinkMacSystemFont, avenir next, avenir,
-    helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  --font-main: 'Roboto', sans-serif;
+  /* --font-main: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    helvetica neue, helvetica, Ubuntu, Roboto, noto, segoe ui, arial, sans-serif; */
 }
 
 html {
@@ -141,12 +143,12 @@ address {
 
 .link,
 .contacts {
-  color: var(--primary-text-color);
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  color: var(--primary-text-color);
 }
 
 .nav .link:hover,
@@ -249,13 +251,13 @@ address {
 .feature .title {
   margin-bottom: 10px;
 
-  color: var(--primary-text-color);
-
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  color: var(--primary-text-color);
 }
 
 .feature .desc {
@@ -274,10 +276,6 @@ address {
 .what-we-do .caption {
   padding: 27px;
 }
-/* FIXME */
-/* img {
-  display: block;
-} */
 
 .what-we-do .caption {
   color: #ffffff;
@@ -402,7 +400,6 @@ address {
   padding: 60px 15px;
 
   display: flex;
-  /* justify-content: space-between; */
 }
 
 .page-footer .address-container {
@@ -499,7 +496,38 @@ footer .phone {
 }
 
 /* ANCHOR Portfolio page */
+.portfolio {
+  margin: 94px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-nav {
+  margin-bottom: 34px;
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-nav .item.item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filter-btn {
+  display: inline-block;
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
   background-color: var(--btn-bg);
 }
 
@@ -510,7 +538,42 @@ footer .phone {
   background-color: var(--accent-color);
 }
 
-.list-all .desc {
+.all-container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.portfolio .list-all {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio .list-all .item {
+  outline: 1px solid var(--border-container);
+}
+
+/* .list-all .item:not(nth-child(3n + 3)) {
+  outline: 2px solid tomato;
+} */
+.list-all .item:nth-child(3n + 1),
+.list-all .item:nth-child(3n + 2) {
+  margin-right: 30px;
+}
+
+.list-all .item:nth-last-child(n + 4) {
+  margin-bottom: 30px;
+}
+
+.description-container {
+  padding: 20px 24px;
+}
+
+.project-name {
+  margin-bottom: 4px;
+}
+
+.list-all .details {
   color: var(--btn-text-color);
   background-color: var(--item-desc-bg);
 }
