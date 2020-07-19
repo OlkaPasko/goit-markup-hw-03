@@ -54,6 +54,7 @@ address {
 /* ANCHOR Шапка сайта */
 .page-header {
   margin-bottom: 0px;
+  border-bottom: 1px solid #ececec;
 }
 
 .page-header .container {
