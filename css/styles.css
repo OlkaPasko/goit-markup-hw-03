@@ -43,6 +43,12 @@ body {
   font-family: var(--font-main);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 address {
   font-style: normal;
 }
@@ -85,7 +91,6 @@ address {
   text-decoration: none;
 }
 
-/* Лого styles */
 .logo {
   display: inline-block;
   margin-right: 85px;
@@ -125,12 +130,7 @@ address {
 }
 
 .address-icon {
-  vertical-align: middle;
-}
-
-.address-item {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-right: 10px;
 }
 
 .address-item:not(:last-child) {
@@ -140,6 +140,7 @@ address {
 .link.contacts {
   padding-top: 32px;
   padding-bottom: 32px;
+  display: flex;
 }
 
 .link,
@@ -211,18 +212,16 @@ address {
 }
 
 /* ANCHOR Особенности */
-/* padding for sections */
-.feature,
-.what-we-do,
-.our-team,
-.customers {
+.section {
   padding: 94px 0px;
 }
 
-.feature,
-.what-we-do .list,
-.our-team .list,
-.customers .list {
+.feature {
+  padding-top: 94px;
+}
+
+.feature .list,
+.section .list {
   display: flex;
   justify-content: center;
 }
@@ -237,7 +236,7 @@ address {
 /* margin-right for 4 sections items */
 .feature .item:not(:last-child),
 .what-we-do .item:not(:last-child),
-.our-team .list .item-member:not(:last-child),
+.our-team .item-member:not(:last-child),
 .customers .logo-icon:not(:last-child) {
   margin-right: 30px;
 }
@@ -306,9 +305,12 @@ address {
 
 /* ANCHOR Наша команда */ /* и часть Портфолио Все */
 .our-team .item-member {
+  padding-bottom: 24px;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
+
+  background-color: #ffffff;
 }
 
 .item-member > .photo {
@@ -321,10 +323,6 @@ address {
 
 .item-member > .occupation {
   margin-bottom: 16px;
-}
-
-.item-member > .networks {
-  margin-bottom: 24px;
 }
 
 .networks > .item:not(:last-child) {
@@ -506,15 +504,14 @@ footer .phone {
 
 /* ANCHOR Portfolio page */
 .portfolio {
-  margin: 94px 0px;
+  padding: 94px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .filter-nav {
-  margin-bottom: 34px;
-  padding-bottom: 16px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
@@ -562,9 +559,6 @@ footer .phone {
   outline: 1px solid var(--border-container);
 }
 
-/* .list-all .item:not(nth-child(3n + 3)) {
-  outline: 2px solid tomato;
-} */
 .list-all .item:nth-child(3n + 1),
 .list-all .item:nth-child(3n + 2) {
   margin-right: 30px;
